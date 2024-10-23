@@ -5,4 +5,3 @@ Este proyecto consiste en el desarrollo de una plataforma que proporciona recome
 
 ## Integrantes del Equipo
 - Andrés David Osorio Moreno
-- Andrés Restrepo Jiménez
