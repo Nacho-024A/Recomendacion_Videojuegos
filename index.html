@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRV - Juegos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #1a1a2e;
+            color: white;
+        }
+
+        header {
+            background-color: #16213e;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #00fff5;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-button {
+            background-color: #0f3460;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 15px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        main {
+            display: flex;
+            padding: 1rem;
+            gap: 1rem;
+        }
+
+        .filters {
+            background-color: #16213e;
+            padding: 1rem;
+            border-radius: 10px;
+            width: 250px;
+        }
+
+        .filter-section {
+            margin-bottom: 1rem;
+        }
+
+        .filter-title {
+            color: #00fff5;
+            margin-bottom: 0.5rem;
+        }
+
+        select {
+            width: 100%;
+            padding: 0.5rem;
+            background-color: #0f3460;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+
+        .content {
+            background-color: #16213e;
+            flex: 1;
+            padding: 1rem;
+            border-radius: 10px;
+        }
+
+        .sort-section {
+            margin-bottom: 1rem;
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .game-card {
+            background-color: #1a1a2e;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .game-image {
+            background-color: #0f3460;
+            height: 150px;
+            width: 100%;
+        }
+
+        .game-info {
+            padding: 1rem;
+        }
+
+        .game-title {
+            margin-bottom: 0.5rem;
+        }
+
+        .game-rating {
+            display: inline-block;
+            background-color: #00fff5;
+            color: #1a1a2e;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 50%;
+            margin-right: 0.5rem;
+        }
+
+        .game-details {
+            color: #808080;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">SRV</a>
+        <div class="nav-buttons">
+            <a href="login.html" class="nav-button">Login</a>
+            <button class="nav-button">Perfil</button>
+        </div>
+    </header>
+
+    <main>
+        <aside class="filters">
+            <h2>Filtros</h2>
+            <div class="filter-section">
+                <h3 class="filter-title">Género</h3>
+                <select>
+                    <option value="">Seleccionar género</option>
+                    <option value="accion">Acción</option>
+                    <option value="rpg">RPG</option>
+                    <option value="deportes">Deportes</option>
+                    <option value="carreras">Carreras</option>
+                </select>
+            </div>
+
+            <div class="filter-section">
+                <h3 class="filter-title">Plataforma</h3>
+                <select>
+                    <option value="">Seleccionar plataforma</option>
+                    <option value="ps5">PS5</option>
+                    <option value="xbox">Xbox</option>
+                    <option value="switch">Switch</option>
+                    <option value="pc">PC</option>
+                </select>
+            </div>
+
+            <div class="filter-section">
+                <h3 class="filter-title">Clasificación</h3>
+                <select>
+                    <option value="">Seleccionar clasificación</option>
+                    <option value="e">E (Para todos)</option>
+                    <option value="t">T (Teen)</option>
+                    <option value="m">M (Mature)</option>
+                </select>
+            </div>
+        </aside>
+
+        <section class="content">
+            <div class="sort-section">
+                <select>
+                    <option value="genero">Ordenar por: Género ↓</option>
+                    <option value="nombre">Nombre</option>
+                    <option value="clasificacion">Clasificación</option>
+                </select>
+            </div>
+
+            <div class="games-grid">
+                <div class="game-card">
+                    <div class="game-image"></div>
+                    <div class="game-info">
+                        <h3 class="game-title">The Last Journey</h3>
+                        <span class="game-rating">T</span>
+                        <span class="game-details">Acción | PS5</span>
+                    </div>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-image"></div>
+                    <div class="game-info">
+                        <h3 class="game-title">Crystal Quest</h3>
+                        <span class="game-rating">E</span>
+                        <span class="game-details">RPG | PC</span>
+                    </div>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-image"></div>
+                    <div class="game-info">
+                        <h3 class="game-title">Dark Souls IV</h3>
+                        <span class="game-rating">M</span>
+                        <span class="game-details">RPG | Xbox</span>
+                    </div>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-image"></div>
+                    <div class="game-info">
+                        <h3 class="game-title">Mario Kart 9</h3>
+                        <span class="game-rating">E</span>
+                        <span class="game-details">Carreras | Switch</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
